@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quinoline Era — ADF Antimalarial Drugs: Mefloquine and Tafenoquine</title>
+<style>
+  /* ── TOKENS ─────────────────────────────────────────────────────────── */
+  :root {
+    --ink:        #1a1a1a;
+    --ink-light:  #444444;
+    --ink-muted:  #6b6b6b;
+    --page:       #f8f7f4;
+    --warm-white: #ffffff;
+    --rule:       #d6d1c8;
+    --accent:     #2e5c8a;       /* steel-blue — service, gravitas */
+    --accent-dark:#1d3d5f;
+    --caution:    #7a4f1e;       /* amber-brown — contested/uncertain */
+    --caution-bg: #fdf6ee;
+    --note-bg:    #eef3f8;
+    --crisis-bg:  #1d3d5f;
+    --crisis-fg:  #ffffff;
+    --serif:      'Georgia', 'Times New Roman', serif;
+    --sans:       'Helvetica Neue', Arial, sans-serif;
+    --mono:       'Courier New', Courier, monospace;
+    --max-prose:  72ch;
+    --max-wide:   1120px;
+  }
+
+  /* ── RESET ───────────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 17px; }
+  body {
+    font-family: var(--sans);
+    background: var(--page);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); text-decoration: underline; }
+  a:hover { color: var(--accent-dark); }
+
+  /* ── LAYOUT ──────────────────────────────────────────────────────────── */
+  .container { max-width: var(--max-wide); margin: 0 auto; padding: 0 1.5rem; }
+  .prose { max-width: var(--max-prose); }
+
+  /* ── CRISIS BANNER ───────────────────────────────────────────────────── */
+  .crisis-banner {
+    background: var(--crisis-bg);
+    color: var(--crisis-fg);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  .crisis-banner a { color: #a8cff0; }
+
+  /* ── TOP NAV ─────────────────────────────────────────────────────────── */
+  .site-nav {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav .inner {
+    max-width: var(--max-wide);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 52px;
+    flex-wrap: wrap;
+  }
+  .site-nav .brand {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.2rem;
+    list-style: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .nav-links a {
+    color: var(--ink-light);
+    text-decoration: none;
+    padding: 0.15rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .nav-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ── HERO ────────────────────────────────────────────────────────────── */
+  .hero {
+    background: var(--accent-dark);
+    color: #fff;
+    padding: 4rem 1.5rem 3.5rem;
+  }
+  .hero-inner { max-width: var(--max-wide); margin: 0 auto; }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #a8cff0;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    font-weight: normal;
+    max-width: 22ch;
+    margin-bottom: 1.4rem;
+  }
+  .hero-lead {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    max-width: 60ch;
+    color: #dde8f2;
+    margin-bottom: 2rem;
+  }
+  .hero-anchors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+  }
+  .hero-anchors a {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: #d4e8fb;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+  .hero-anchors a:hover { background: rgba(255,255,255,0.22); }
+
+  /* ── SECTION SCAFFOLD ────────────────────────────────────────────────── */
+  .page-section {
+    padding: 4rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-section:nth-child(even) { background: var(--warm-white); }
+  .section-inner { max-width: var(--max-wide); margin: 0 auto; }
+
+  /* ── SECTION HEADINGS ────────────────────────────────────────────────── */
+  .section-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    font-weight: normal;
+    line-height: 1.25;
+    margin-bottom: 1.4rem;
+    color: var(--ink);
+  }
+  h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-top: 2.2rem;
+    margin-bottom: 0.7rem;
+    color: var(--ink);
+  }
+  h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── PROSE ───────────────────────────────────────────────────────────── */
+  p { margin-bottom: 1.1rem; color: var(--ink); }
+  p:last-child { margin-bottom: 0; }
+  .lead-para {
+    font-size: 1.08rem;
+    line-height: 1.72;
+    color: var(--ink-light);
+    margin-bottom: 1.6rem;
+  }
+  ul, ol { padding-left: 1.4rem; margin-bottom: 1.1rem; }
+  li { margin-bottom: 0.4rem; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+
+  /* ── CALLOUT / NOTE BOXES ────────────────────────────────────────────── */
+  .callout {
+    background: var(--note-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1.1rem 1.3rem;
+    margin: 1.8rem 0;
+    border-radius: 0 3px 3px 0;
+  }
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .callout-caution {
+    background: var(--caution-bg);
+    border-left-color: var(--caution);
+  }
+  .callout-caution .callout-label { color: var(--caution); }
+
+  /* ── TWO-COL DRUG GRID ───────────────────────────────────────────────── */
+  .drug-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .drug-card {
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    padding: 1.6rem;
+    border-radius: 2px;
+  }
+  .drug-card h3 { margin-top: 0; font-size: 1.15rem; }
+  .drug-card .trade-name {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ── TIMELINE ────────────────────────────────────────────────────────── */
+  .timeline { list-style: none; padding: 0; margin: 1.5rem 0; position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 5.5rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--rule);
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0 1.5rem;
+    margin-bottom: 1.4rem;
+    position: relative;
+  }
+  .tl-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: right;
+    padding-top: 0.05rem;
+    padding-right: 1.5rem;
+    position: relative;
+  }
+  .tl-year::after {
+    content: '';
+    position: absolute;
+    right: -0.35rem;
+    top: 0.45rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--page);
+  }
+  .timeline li:nth-child(even) .tl-year::after { background: var(--ink-muted); }
+  .tl-body { font-size: 0.93rem; line-height: 1.6; color: var(--ink); }
+  .tl-body strong { display: block; font-size: 0.85rem; color: var(--ink-light); margin-bottom: 0.2rem; font-weight: 700; }
+
+  /* ── SYMPTOM TABLE ───────────────────────────────────────────────────── */
+  .symptom-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+  .symptom-table th {
+    background: var(--accent-dark);
+    color: #fff;
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .symptom-table td { padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .symptom-table tr:last-child td { border-bottom: none; }
+  .symptom-table tr:nth-child(even) td { background: #f3f1ee; }
+
+  /* ── RECOMMENDATIONS ─────────────────────────────────────────────────── */
+  .rec-list { list-style: none; padding: 0; counter-reset: recs; }
+  .rec-list li {
+    counter-increment: recs;
+    display: grid;
+    grid-template-columns: 2.2rem 1fr;
+    gap: 0 0.9rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.93rem;
+    align-items: start;
+  }
+  .rec-list li::before {
+    content: counter(recs);
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--accent);
+    padding-top: 0.08rem;
+    font-family: var(--mono);
+  }
+
+  /* ── SUPPORT BOX ─────────────────────────────────────────────────────── */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  .support-card {
+    background: var(--note-bg);
+    border: 1px solid #c5d6e8;
+    padding: 1.2rem;
+    border-radius: 2px;
+  }
+  .support-card h4 { margin-top: 0; font-size: 0.78rem; }
+  .support-card .support-phone {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    display: block;
+    margin: 0.3rem 0;
+    text-decoration: none;
+  }
+  .support-card p { font-size: 0.85rem; color: var(--ink-light); margin-bottom: 0; }
+
+  /* ── SOURCES LIST ────────────────────────────────────────────────────── */
+  .sources-list { list-style: none; padding: 0; }
+  .sources-list li {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    line-height: 1.5;
+  }
+  .sources-list li:last-child { border-bottom: none; }
+  .src-label {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .src-primary   { background: #dde8f5; color: var(--accent-dark); }
+  .src-peer      { background: #e0f0e3; color: #1e5c2b; }
+  .src-advocacy  { background: #fde9d2; color: #7a4f1e; }
+  .src-media     { background: #ece8f5; color: #4b3580; }
+
+  /* ── FOOTER ──────────────────────────────────────────────────────────── */
+  .site-footer {
+    background: var(--ink);
+    color: #aaa;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .site-footer a { color: #7db3d8; }
+
+  /* ── SCROLL-TO-TOP ───────────────────────────────────────────────────── */
+  .back-to-top {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    margin-top: 1.2rem;
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .timeline::before { left: 3.8rem; }
+    .timeline li { grid-template-columns: 3.8rem 1fr; gap: 0 1rem; }
+    .tl-year { padding-right: 1rem; }
+    .tl-year::after { right: -0.3rem; }
+    .hero h1 { font-size: 1.85rem; }
+    .nav-links { font-size: 0.72rem; gap: 0.2rem 0.9rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CRISIS BANNER
+════════════════════════════════════════════════════════════════════════ -->
+<div class="crisis-banner">
+  If you are in crisis, contact <strong>Open Arms – Veterans &amp; Families Counselling</strong>:
+  <a href="tel:1800011046">1800 011 046</a> (24 hrs) &nbsp;|&nbsp;
+  <strong>Lifeline</strong>: <a href="tel:131114">13 11 14</a> &nbsp;|&nbsp;
+  <strong>Veterans Line</strong>: <a href="tel:1800011046">1800 011 046</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     STICKY NAV
+════════════════════════════════════════════════════════════════════════ -->
+<nav class="site-nav" aria-label="Page navigation">
+  <div class="inner">
+    <a class="brand" href="#top">The Quinoline Era</a>
+    <ul class="nav-links">
+      <li><a href="#what">What This Is</a></li>
+      <li><a href="#drugs">The Drugs</a></li>
+      <li><a href="#trials">The Trials</a></li>
+      <li><a href="#science">The Science</a></li>
+      <li><a href="#misdiagnosis">Misdiagnosis</a></li>
+      <li><a href="#injury">Living With Injury</a></li>
+      <li><a href="#families">Families</a></li>
+      <li><a href="#inquiries">Inquiries</a></li>
+      <li><a href="#international">International</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Australian Defence Force &nbsp;·&nbsp; 1990 to present</p>
+    <h1>The Quinoline Era</h1>
+    <p class="hero-lead">
+      From the late 1990s, thousands of ADF personnel were given antimalarial drugs — mefloquine 
+      and tafenoquine — on deployments to East Timor, Bougainville, and elsewhere. Some were 
+      participants in clinical trials of drugs that were not yet registered for human use. 
+      Many developed serious neuropsychiatric symptoms. A significant number received the wrong 
+      diagnosis, the wrong treatment, or no treatment at all. Their families lived with the 
+      consequences. This page documents what happened, what is known, what is still disputed, 
+      and where to get help.
+    </p>
+    <ul class="hero-anchors">
+      <li><a href="#what">What this is</a></li>
+      <li><a href="#drugs">The drugs</a></li>
+      <li><a href="#trials">The trials</a></li>
+      <li><a href="#misdiagnosis">Misdiagnosis</a></li>
+      <li><a href="#families">For families</a></li>
+      <li><a href="#support">Get help</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 1 — WHAT THE QUINOLINE ERA IS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="what">
+  <div class="section-inner">
+    <p class="section-eyebrow">Definition</p>
+    <h2>What the Quinoline Era is</h2>
+    <div class="prose">
+      <p class="lead-para">
+        The "Quinoline Era" is a name used by veterans, advocates, and researchers to describe 
+        the period — beginning in the late 1980s and continuing to the present — during which 
+        quinoline-class antimalarial drugs, primarily mefloquine and tafenoquine, were 
+        administered to Australian Defence Force personnel with inadequate safety monitoring, 
+        inadequate adverse-event reporting, and, for many, lasting harm.
+      </p>
+      <p>
+        The word "quinoline" refers to the chemical structure shared by both drugs. Neither 
+        drug is new — mefloquine was developed in the 1970s and tafenoquine in the 1980s, 
+        both initially by the United States Army — but their full neurological risk profile 
+        took decades of accumulated evidence, regulatory intervention, and veteran testimony 
+        to come into focus.
+      </p>
+      <p>
+        The era is defined not just by the drugs but by a set of institutional failures that 
+        surrounded them: clinical trials conducted on active-duty personnel without adequate 
+        informed consent processes; adverse events that were systematically under-reported to 
+        regulators; a misdiagnosis pattern that left neurologically injured veterans being 
+        treated for psychological trauma they may not have had; and a compensation system 
+        that could not easily recognise the condition these veterans actually had.
+      </p>
+      <p>
+        The era is not closed. Veterans are still living with the consequences. Research into 
+        long-term effects remains incomplete. Institutional responses — from the Department 
+        of Veterans' Affairs, the Department of Defence, and the Royal Commission — are 
+        still evolving. What changed most significantly in 2024 was that the Royal Commission 
+        into Defence and Veteran Suicide formally acknowledged, in its final report, that this 
+        is a real issue requiring a real response.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     EVIDENTIAL DISCIPLINE
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="evidence-discipline">
+  <div class="section-inner">
+    <div class="prose">
+      <p class="section-eyebrow">How this page handles evidence</p>
+      <h2>Evidential discipline</h2>
+      <p>
+        This page uses four categories of evidence to maintain clarity: established facts 
+        supported by primary sources; contested claims where credible experts or institutions 
+        disagree; areas of uncertainty where research is incomplete or absent; and 
+        contradictions between sources, where official positions diverge. This helps readers 
+        understand what is known, what is debated, and what has not yet been studied.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 2 — THE DRUGS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="drugs">
+  <div class="section-inner">
+    <p class="section-eyebrow">Drug Profiles</p>
+    <h2>The drugs: mefloquine and tafenoquine</h2>
+    <p class="prose lead-para">
+      Both mefloquine and tafenoquine belong to the quinoline class of antimalarials. Both 
+      are effective at preventing and treating malaria. Both carry a neuropsychiatric adverse-
+      effect profile that is now well-documented in regulatory labelling, peer-reviewed 
+      literature, and the testimony of thousands of people who have taken them.
+    </p>
+
+    <div class="drug-grid">
+
+      <div class="drug-card">
+        <h3>Mefloquine</h3>
+        <p class="trade-name">Trade name: Lariam®</p>
+        <p>
+          Developed by the United States Army's Walter Reed Army Institute of Research in the 
+          1970s, mefloquine was approved by the US Food and Drug Administration in 1989. 
+          It works as a weekly oral tablet, which made it appealing for military use — one dose 
+          per week was easier to enforce than daily alternatives.
+        </p>
+        <p>
+          The ADF adopted mefloquine as a second-line antimalarial in 1990, behind doxycycline. 
+          It was widely used on peacekeeping deployments to malaria-endemic regions across 
+          South-East Asia and the South Pacific.
+        </p>
+        <p>
+          Known adverse effects include nausea, dizziness, sleep disturbances (insomnia and 
+          vivid or terrifying dreams), anxiety, depression, confusion, paranoia, hallucinations, 
+          and in some cases psychosis and seizures. In 2013, the US FDA strengthened the 
+          mefloquine label with a "boxed warning" — the most serious category of safety alert 
+          — stating that neurological side effects <em>can last for months to years after 
+          the drug is stopped, or can be permanent.</em> The ADF demoted mefloquine to a 
+          third-line drug in 2006, meaning it should only be used when doxycycline and 
+          atovaquone/proguanil are unavailable or inappropriate.
+        </p>
+      </div>
+
+      <div class="drug-card">
+        <h3>Tafenoquine</h3>
+        <p class="trade-name">Trade names: Arakoda®, Krintafel®, Kozenis®, Kodatef®</p>
+        <p>
+          Also developed by the Walter Reed Army Institute of Research, in the 1980s, 
+          tafenoquine belongs to the 8-aminoquinoline subclass — chemically related to 
+          primaquine, which has been used for decades as a post-exposure treatment. 
+          Tafenoquine was not approved for clinical use anywhere in the world until 2018.
+        </p>
+        <p>
+          Before registration, tafenoquine was trialled on ADF personnel deployed to 
+          Bougainville and East Timor between 1998 and 2002, in studies run by the 
+          Australian Army Malaria Institute (AMI) in collaboration with GlaxoSmithKline 
+          (then SmithKline Beecham) and the US Army medical development program.
+        </p>
+        <p>
+          Its known adverse effects overlap significantly with mefloquine's, including 
+          neuropsychiatric symptoms such as anxiety, sleep disturbance, and abnormal dreams. 
+          One particularly notable finding from the East Timor trials was the development 
+          of <em>vortex keratopathy</em> — a characteristic swirling pattern of deposits 
+          on the cornea — in 93.2% of tafenoquine recipients in the safety substudy. 
+          This finding, despite its prevalence, was not adequately reflected in adverse-event 
+          reports filed with the Therapeutic Goods Administration (TGA) at the time.
+        </p>
+        <p>
+          The TGA approved tafenoquine in 2018. Its safety label carries the same key 
+          psychiatric contraindication as mefloquine: it should not be given to people 
+          with a current or past history of serious psychiatric disorders.
+        </p>
+      </div>
+
+    </div><!-- /drug-grid -->
+
+    <div class="callout" style="margin-top: 2rem;">
+      <p class="callout-label">Why this matters</p>
+      <p>
+        Both drugs were given to ADF personnel who were required to take them as a condition 
+        of deployment. In the context of clinical trials, participants did not always have a 
+        genuine choice to decline. The consent process in the AMI trials was later criticised 
+        by the Senate inquiry and in testimony to the Royal Commission as falling short of 
+        ethical standards for informed consent.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 3 — THE ADF TRIALS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="trials">
+  <div class="section-inner">
+    <p class="section-eyebrow">ADF Trials and Policy History</p>
+    <h2>The trials: what happened in East Timor and Bougainville</h2>
+    <div class="prose">
+      <p class="lead-para">
+        Between 1998 and 2002, the Australian Army Malaria Institute ran a series of 
+        clinical trials of mefloquine and the then-unregistered drug tafenoquine, using 
+        ADF personnel deployed on active operations as trial participants. These trials 
+        are at the heart of what is now called the Quinoline Era.
+      </p>
+
+      <h3>The Army Malaria Institute</h3>
+      <p>
+        The Army Malaria Institute (AMI) was the ADF's dedicated research unit for 
+        tropical infectious diseases, based at Gallipoli Barracks in Enoggera, Queensland. 
+        Its mission was to develop and test preventatives and treatments for the malaria 
+        and other tropical diseases that threatened ADF operations in the region. The AMI 
+        was funded by the Australian Government but also received funding from the United 
+        States Army Medical Materiel Development Activity (USAMMDA) and, for the 
+        tafenoquine trials, from GlaxoSmithKline.
+      </p>
+      <p>
+        This combination — military-run trials, pharmaceutical funding, and service personnel 
+        as subjects — created a conflict of interest that advocates, researchers, and ultimately 
+        the 2018 Senate inquiry identified as a significant factor in what went wrong. Medical 
+        officers within the military structure had professional obligations both to their 
+        patients and to the trial program.
+      </p>
+
+      <h3>The Bougainville trials (1998–1999)</h3>
+      <p>
+        The first major tafenoquine trial used ADF personnel deployed to Bougainville 
+        (PNG) as part of peacekeeping operations. Approximately 378 personnel received 
+        tafenoquine and 214 received primaquine (the then-standard post-exposure treatment) 
+        as a comparator. These were some of the earliest Phase II/III trials of tafenoquine 
+        in a military deployment setting.
+      </p>
+
+      <h3>The East Timor trials (1999–2002)</h3>
+      <p>
+        The East Timor trials were larger and more consequential. Three separate trial 
+        protocols were run across this period:
+      </p>
+      <ul>
+        <li>
+          <strong>Trial 2 (1999–2000):</strong> 636 personnel received tafenoquine as 
+          post-exposure prophylaxis; 289 received primaquine.
+        </li>
+        <li>
+          <strong>Trial 3 (2000–2001, "the Nasveld trial"):</strong> 492 personnel received 
+          tafenoquine as prophylaxis; 162 received mefloquine as comparator. This study 
+          found vortex keratopathy in 93.2% of tafenoquine recipients assessed ophthalmologically. 
+          It also found that neuropsychiatric adverse events were reported in 13.4% of 
+          tafenoquine recipients and 11.7% of mefloquine recipients. No neuropsychiatric 
+          adverse events from this trial were reported to the TGA at the time.
+        </li>
+        <li>
+          <strong>Trial 4 (2001–2002, "the Kitchener trial"):</strong> 1,157 personnel 
+          received mefloquine and 388 received doxycycline. This trial found that 57% of 
+          mefloquine users reported at least one adverse event, including sleep disturbance 
+          in 31% and fatigue in 21%. Three serious neuropsychiatric adverse events were 
+          recorded as possibly related to mefloquine. The headline conclusion — that 94% 
+          of participants said they would take mefloquine again — was widely cited as 
+          evidence of tolerability, despite the significant adverse-event figures in the 
+          same paper.
+        </li>
+      </ul>
+
+      <h3>What the inquiry found about the trials</h3>
+      <p>
+        The 2018 Senate inquiry identified a number of serious concerns about the way 
+        these trials were conducted:
+      </p>
+      <ul>
+        <li>
+          Adverse events were significantly under-reported to the TGA, both during and 
+          after the trials. The vortex keratopathy finding is the clearest example: 
+          93.2% occurrence in the trial, but only five adverse-event reports lodged with 
+          the TGA, all categorised as "visual impairment."
+        </li>
+        <li>
+          The informed-consent process did not adequately disclose the neuropsychiatric 
+          risk profile of the drugs, particularly for tafenoquine, which was unregistered 
+          at the time.
+        </li>
+        <li>
+          No longitudinal follow-up of trial participants was ever conducted. Veterans 
+          who developed symptoms after the trials had no record in their health files 
+          connecting their condition to their participation.
+        </li>
+        <li>
+          The publication of safety data was delayed and the framing of adverse-event 
+          rates in published papers diverged from the raw data in ways that created a 
+          misleadingly positive safety narrative for mefloquine in military settings.
+        </li>
+      </ul>
+
+      <div class="callout callout-caution">
+        <p class="callout-label">Evidential note</p>
+        <p>
+          The Senate inquiry documented these concerns formally. Some — particularly the 
+          characterisation of informed-consent failures and the degree of deliberate 
+          under-reporting — are contested by the Department of Defence and have not been 
+          independently adjudicated by a court. The documentary record from the trials, 
+          released under Freedom of Information, supports the concern about under-reporting 
+          to the TGA. The intent behind the discrepancies remains disputed.
+        </p>
+      </div>
+
+      <h3>ADF policy: then and now</h3>
+      <p>
+        Mefloquine entered the ADF antimalarial inventory as a second-line agent in 1990. 
+        It remained in relatively wide use through the 1990s and early 2000s, including 
+        as a trial comparator in East Timor. In 2006, the ADF demoted mefloquine to 
+        third-line status, meaning atovaquone/proguanil (Malarone) became the preferred 
+        alternative when doxycycline was contraindicated. Mefloquine should now only be 
+        prescribed when both first- and second-line alternatives are unavailable.
+      </p>
+      <p>
+        Tafenoquine received TGA registration in 2018. The Senate inquiry recommended 
+        that any future administration of tafenoquine in the ADF be subject to careful 
+        medical oversight. The Royal Commission in 2024 went further in recommending 
+        a specific brain-injury program for those exposed to mefloquine or tafenoquine.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        Understanding what the trials produced leads directly to the scientific question: what do these drugs do in the brain, and why do some effects persist long after exposure ends.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 4 — THE SCIENCE
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="science">
+  <div class="section-inner">
+    <p class="section-eyebrow">Scientific Literature</p>
+    <h2>What the science shows — and where it remains unsettled</h2>
+    <div class="prose">
+      <p class="lead-para">
+        There is now a substantial body of peer-reviewed evidence that mefloquine and 
+        tafenoquine can cause serious, lasting neuropsychiatric effects in a proportion 
+        of people who take them. What remains contested is the precise mechanism, 
+        the prevalence of lasting injury, and whether that injury constitutes a 
+        clinically distinct condition separate from other neuropsychiatric disorders.
+      </p>
+
+      <h3>What is well established</h3>
+      <p>
+        The neuropsychiatric adverse effects of mefloquine are documented across more 
+        than three decades of pharmacovigilance data, clinical trial reports, and 
+        case series. The US FDA's 2013 boxed warning is the most significant 
+        regulatory statement: it acknowledged that neurological side effects — 
+        including dizziness, balance problems, tinnitus, and neuropsychiatric 
+        symptoms including anxiety, paranoia, depression, hallucinations, and 
+        psychosis — <em>can persist for months to years after the drug is stopped, 
+        or can be permanent.</em>
+      </p>
+      <p>
+        The European Medicines Agency reached a similar conclusion in 2014, finding 
+        evidence of long-lasting and potentially persistent neuropsychiatric and 
+        vestibular effects.
+      </p>
+      <p>
+        A 2015 study by Ringqvist and colleagues in Denmark followed 73 people who 
+        had reported mefloquine adverse reactions. They found that years after stopping 
+        the drug, significant proportions continued to experience anxiety (55%), 
+        recurring nightmares (59%), cognitive dysfunction (59%), and paranoia or 
+        delusions (51%). These figures come from a population that had already reported 
+        adverse reactions — they are not prevalence rates across all mefloquine users — 
+        but they provide the most detailed published picture of what long-term mefloquine 
+        injury can look like.
+      </p>
+      <p>
+        Research by US physician and epidemiologist Dr Remington Nevin — the most 
+        prolific single contributor to this literature — has used regulatory adverse-event 
+        data, case series, and pharmacological analysis to build a framework for what 
+        he calls "neuropsychiatric quinism," a condition he argues is caused by direct 
+        pharmacological injury to the brainstem, limbic system, and vestibular system. 
+        Nevin's work has been published in peer-reviewed journals and cited in Australian 
+        parliamentary submissions.
+      </p>
+
+      <h3>What remains contested</h3>
+      <p>
+        The concept of "chronic quinoline encephalopathy" or "neuropsychiatric quinism" 
+        as a discrete, formally recognised clinical entity is still contested. The 
+        Australian Repatriation Medical Authority (RMA) investigated this question 
+        in 2017 and concluded that there was insufficient sound medical-scientific 
+        evidence to establish a causal link between quinoline exposure and a distinct 
+        form of acquired brain injury. The Specialist Medical Review Council confirmed 
+        this finding in 2018.
+      </p>
+      <p>
+        Other researchers have argued that the evidence for lasting harm is weaker 
+        than advocates contend, noting that many studies rely on self-reported 
+        symptoms, small samples, and populations with a prior adverse-event history 
+        (which creates selection bias). A large US study published in 2017 (Eick-Cost 
+        et al.), examining neuropsychiatric outcomes in nearly 370,000 service members, 
+        found that mefloquine was associated with increased PTSD diagnoses in 
+        non-deployed personnel — a finding consistent with neurotoxic effects — 
+        but did not find broad neuropsychiatric harm across all outcome categories.
+      </p>
+
+      <h3>The pharmacogenomics question</h3>
+      <p>
+        There is a growing body of evidence suggesting that genetic variation in 
+        liver enzymes — particularly CYP2D6 and CYP3A4/5, which are involved in 
+        metabolising these drugs — may help explain why some people develop severe 
+        adverse reactions and others do not. Jane Quinn, scientific adviser to the 
+        Quinoline Veterans and Families Association, found that 92% of ADF veterans 
+        with documented long-term adverse effects who provided genetic data were 
+        identified as poor or intermediate metabolisers at one or both of these 
+        enzyme loci. No pharmacogenomic screening was performed for trial participants 
+        at the time.
+      </p>
+      <p>
+        This is a plausible and clinically important area, but it has not been studied 
+        systematically in the ADF cohort. Routine pharmacogenomic profiling before 
+        administering these drugs was recommended by the QVFA and by the Quinn Senate 
+        submission, but has not been implemented.
+      </p>
+
+      <h3>What we still do not know</h3>
+      <p>
+        The most significant gap in the evidence base is the absence of any systematic, 
+        longitudinal follow-up study of ADF trial participants. No study has tracked 
+        the health of the roughly 1,500 personnel who received tafenoquine in the AMI 
+        trials over the decades since. The University of Queensland study commissioned 
+        by Defence and DVA in 2018 used existing 2007–2008 survey data and was 
+        explicitly limited by small numbers of mefloquine users, a cross-sectional 
+        design, and recall bias. It found some association between mefloquine use 
+        and poorer health outcomes in Bougainville veterans, but could not draw 
+        causal conclusions.
+      </p>
+      <p>
+        There is no established treatment specifically for quinoline-induced neurological 
+        injury. There are no validated diagnostic protocols for distinguishing it from 
+        PTSD in someone who has also had combat exposure. And the potential 
+        intergenerational effects on the children of affected veterans have not been 
+        studied at all.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        These scientific uncertainties shaped how symptoms were interpreted — and in many cases misinterpreted — when veterans returned from deployment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 5 — MISDIAGNOSIS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="misdiagnosis">
+  <div class="section-inner">
+    <p class="section-eyebrow">Misdiagnosis Patterns</p>
+    <h2>The wrong diagnosis: quinoline injury and PTSD</h2>
+    <div class="prose">
+      <p class="lead-para">
+        Veterans returning from East Timor and Bougainville with persistent neuropsychiatric 
+        symptoms — rage, paranoia, nightmares, cognitive impairment, emotional numbing — 
+        entered a clinical system that had, at the time, essentially one framework for 
+        understanding those symptoms in returned soldiers: post-traumatic stress disorder.
+      </p>
+      <p>
+        PTSD is a real, serious, and well-documented condition. The clinicians who 
+        diagnosed it were not acting in bad faith. They were applying the framework 
+        they had been trained to apply. The problem is that the symptom profile of 
+        quinoline-induced neuropsychiatric injury overlaps with PTSD so closely that, 
+        without specific training in quinoline neurotoxicity, differential diagnosis 
+        is extremely difficult.
+      </p>
+
+      <h3>Why the symptoms look the same</h3>
+    </div>
+
+    <div style="overflow-x: auto; margin: 1rem 0;">
+      <table class="symptom-table" aria-label="Symptom overlap between quinoline injury and PTSD">
+        <thead>
+          <tr>
+            <th>Symptom domain</th>
+            <th>Quinoline-induced injury</th>
+            <th>PTSD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sleep and nightmares</strong></td>
+            <td>Insomnia and vivid, terrifying dreams are listed as very common adverse effects of mefloquine — affecting more than 1 in 10 users. Can persist for years.</td>
+            <td>Sleep disruption and nightmares (re-experiencing) are defining features of PTSD's hyperarousal and intrusion clusters.</td>
+          </tr>
+          <tr>
+            <td><strong>Irritability and rage</strong></td>
+            <td>Pharmacological injury to limbic structures governing impulse control. Episodes can be sudden, disproportionate, and followed by remorse.</td>
+            <td>Hyperactivation of the threat-response system. Also presents as irritability, outbursts, and disproportionate anger.</td>
+          </tr>
+          <tr>
+            <td><strong>Emotional withdrawal</strong></td>
+            <td>Affective flattening; person is physically present but emotionally inaccessible to family.</td>
+            <td>Emotional numbing and avoidance are core features of PTSD's negative alteration cluster.</td>
+          </tr>
+          <tr>
+            <td><strong>Memory and concentration</strong></td>
+            <td>Cognitive impairment is a formally listed adverse effect of mefloquine. Persists after drug discontinuation in some cases.</td>
+            <td>Concentration difficulties are characteristic of PTSD-related cognitive disruption.</td>
+          </tr>
+          <tr>
+            <td><strong>Paranoid ideation</strong></td>
+            <td>Paranoia is listed as an uncommon adverse effect. Can include suspicion directed at family members.</td>
+            <td>Hypervigilance in PTSD can present as suspicion and a persistent sense of threat.</td>
+          </tr>
+          <tr>
+            <td><strong>Dissociation</strong></td>
+            <td>A direct neurological effect of the drug's action on brain structures.</td>
+            <td>Also occurs in PTSD, as a psychological response to traumatic experience.</td>
+          </tr>
+          <tr>
+            <td><strong>Suicidal ideation</strong></td>
+            <td>Cases of suicidal ideation and completed suicide are specifically noted in the FDA's 2013 boxed warning.</td>
+            <td>A significant risk in PTSD. Presence does not distinguish between the two conditions.</td>
+          </tr>
+          <tr>
+            <td><strong>Vestibular dysfunction</strong></td>
+            <td><strong>Distinguishing feature:</strong> dizziness, balance problems, tinnitus, and vertigo are specific neurological effects of quinoline exposure, not features of PTSD.</td>
+            <td>Not typically present.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <h3>Why PTSD became the default</h3>
+      <p>
+        Several factors converged to make PTSD the near-universal diagnosis for these veterans:
+      </p>
+      <ul>
+        <li>
+          <strong>No clinical training in quinoline neurotoxicity.</strong> The FDA's boxed 
+          warning did not exist until 2013. The forensic psychiatric literature identifying 
+          a mefloquine intoxication syndrome as a distinct clinical entity was not published 
+          until around the same time. Clinicians assessing veterans in the early 2000s had 
+          no diagnostic framework for what they were seeing.
+        </li>
+        <li>
+          <strong>Institutional architecture built around PTSD.</strong> DVA and ADF health 
+          services were oriented toward identifying and treating service-related psychological 
+          conditions. PTSD was the predominant category. There was no referral pathway to 
+          acquired brain injury specialists, and no entitlements pathway for quinoline-induced 
+          neurological injury.
+        </li>
+        <li>
+          <strong>The deployment narrative.</strong> Combat experience is a powerful and 
+          culturally available explanation for veteran distress. In the clinical encounter, 
+          what happened on deployment provides a coherent story that supports a PTSD diagnosis. 
+          The drug history was not part of that conversation — it was not collected, not 
+          flagged, and not considered relevant.
+        </li>
+        <li>
+          <strong>No systematic screening.</strong> No follow-up health assessment of AMI 
+          trial subjects was ever conducted. Veterans with symptoms had no record in their 
+          files connecting them to their trial participation.
+        </li>
+        <li>
+          <strong>The entitlements structure.</strong> The DVA's Statements of Principles 
+          provided a compensation pathway for veterans diagnosed with PTSD but not for those 
+          correctly diagnosed with quinoline-induced acquired brain injury — a condition 
+          the RMA had not recognised. A correct diagnosis offered no entitlements pathway; 
+          an incorrect one did.
+        </li>
+      </ul>
+
+      <h3>Why this matters for treatment</h3>
+      <p>
+        PTSD and quinoline-induced neurological injury are fundamentally different kinds of 
+        condition with different mechanisms and different treatment implications. PTSD is a 
+        psychological response to traumatic experience; it responds to trauma-focused 
+        psychotherapy and appropriate pharmacotherapy. Quinoline-induced injury is a direct 
+        pharmacological effect on brain tissue — in the most precise clinical sense, an 
+        acquired brain injury — and it does not respond to treatments designed for PTSD.
+      </p>
+      <p>
+        For a veteran with quinoline-induced injury being treated for PTSD, the result was 
+        years of treatment that did not address the actual injury. Some advocates and 
+        researchers have argued that trauma-focused therapy — which repeatedly activates 
+        threat-related emotional content — may in some cases amplify rather than reduce 
+        symptoms in a person whose limbic system has been pharmacologically injured. 
+        This is a clinical inference consistent with the difference in injury mechanisms; 
+        it has not been formally studied in this population.
+      </p>
+      <p>
+        The two conditions can also co-occur. A veteran may have genuine PTSD from combat 
+        exposure <em>and</em> quinoline-induced neurological injury from the drug they were 
+        given on the same deployment. Getting the diagnosis right does not mean dismissing 
+        the combat experience — it means addressing both.
+      </p>
+
+      <div class="callout">
+        <p class="callout-label">What this means if you are a veteran seeking help</p>
+        <p>
+          If you took mefloquine or tafenoquine on deployment and have been diagnosed with 
+          PTSD, that diagnosis may be correct — or it may be missing part of the picture. 
+          Asking your treating clinician to review your antimalarial history is reasonable 
+          and appropriate. DVA's Mefloquine and Tafenoquine information service 
+          (<a href="tel:1800633567">1800 633 567</a>) can provide advice on accessing 
+          relevant assessments.
+        </p>
+      </div>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        For a deeper account of what quinoline injury does to the brain, and how it differs mechanistically from PTSD, see <a href="https://www.jacqualineroche.com/the-brain">The Brain</a>. These misdiagnoses had profound consequences not only for veterans but for everyone living with them.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 6 — LIVING WITH INJURY
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="injury">
+  <div class="section-inner">
+    <p class="section-eyebrow">Long-Term Neurological Injury</p>
+    <h2>Living with quinoline injury: what it looks like over time</h2>
+    <div class="prose">
+      <p class="lead-para">
+        For many veterans, the effects of mefloquine or tafenoquine did not end when 
+        the deployment did. Some symptoms began during the deployment. Others emerged 
+        weeks or months after returning. In some cases, symptoms that seemed manageable 
+        in the short term intensified over years. This pattern — of symptoms that persist, 
+        fluctuate, and in some cases worsen — is what the published case literature 
+        and advocacy record consistently describe.
+      </p>
+
+      <h3>Prodromal symptoms: the early warning signs</h3>
+      <p>
+        The current Australian product information for mefloquine advises that if 
+        common symptoms of an adverse reaction occur — changes in mood, anxiety, 
+        or altered dream or sleep states — the drug must be discontinued. These 
+        "prodromal" symptoms are now understood as potential early warnings of more 
+        serious and lasting toxicity. For many veterans in the AMI trials, and many 
+        ADF members prescribed mefloquine for deployment, these warnings were either 
+        not recognised, not acted upon, or not reported.
+      </p>
+
+      <h3>The spectrum of long-term effects</h3>
+      <p>
+        Based on the published clinical literature, the Ringqvist (2015) case series, 
+        the FDA adverse-event database, and the testimony of veterans to the Senate 
+        inquiry and Royal Commission, the range of long-term effects reported by 
+        those who attribute them to quinoline exposure includes:
+      </p>
+      <ul>
+        <li>Persistent anxiety, depression, and emotional dysregulation</li>
+        <li>Recurring nightmares and severe sleep disturbances, sometimes for years</li>
+        <li>Cognitive difficulties: impaired memory, concentration, and executive function</li>
+        <li>Vestibular dysfunction: dizziness, balance problems, tinnitus, and vertigo</li>
+        <li>Visual disturbances, including light sensitivity (photophobia)</li>
+        <li>Paranoid ideation and, in some cases, psychotic episodes</li>
+        <li>Personality changes described by veterans and their families as fundamental shifts in who the person was before deployment</li>
+        <li>Suicidal ideation and, in some documented cases, completed suicide</li>
+      </ul>
+      <p>
+        It is important to be clear about the evidential status of this list. That these 
+        symptoms have been reported is a documented fact. That quinoline exposure 
+        caused them — rather than combat stress, other medication, or pre-existing 
+        conditions — is in some cases firmly established by the clinical timeline and 
+        in others contested. The RMA found insufficient evidence to establish a general 
+        causal link between quinoline exposure and lasting brain injury. The Royal 
+        Commission took a different view.
+      </p>
+
+      <h3>Vestibular dysfunction: the distinguishing feature</h3>
+      <p>
+        Among the reported long-term effects, vestibular dysfunction — chronic dizziness, 
+        balance difficulties, and spatial disorientation — has particular diagnostic 
+        significance. These symptoms are not typical features of PTSD, and their 
+        presence alongside neuropsychiatric symptoms in someone with confirmed quinoline 
+        exposure may help distinguish quinoline injury from other conditions. Nevin 
+        (2015) has noted that subtle neurosensory damage, including vestibular effects, 
+        in the absence of a severe initiating traumatic incident, can aid in 
+        differential diagnosis.
+      </p>
+
+      <h3>Suicide</h3>
+      <p>
+        The FDA boxed warning for mefloquine explicitly includes suicidal ideation and 
+        completed suicide in the list of reported adverse events. Cases of suicide 
+        among veterans who took mefloquine are documented in the TGA's adverse-event 
+        database and in testimony to the Royal Commission. Establishing direct causation 
+        in individual cases is methodologically difficult, but the Royal Commission's 
+        Chapter 22 engagement with this population reflects a judgment that the 
+        relationship between these drugs and veteran suicide is real and serious.
+      </p>
+      <p>
+        If you are having thoughts of suicide, please contact 
+        <strong>Open Arms</strong> on <a href="tel:1800011046">1800 011 046</a> (available 
+        24 hours) or <strong>Lifeline</strong> on <a href="tel:131114">13 11 14</a>.
+      </p>
+
+      <h3>Is recovery possible?</h3>
+      <p>
+        The honest answer is: we do not know enough. The FDA's 2013 label states that 
+        effects can be permanent, but it also notes that many adverse effects are 
+        time-limited or improve after discontinuation of the drug. The published 
+        case literature includes people who recovered substantially and people whose 
+        symptoms persisted for many years. There is no established disease-specific 
+        treatment. There are no clinical trials of treatment approaches specific 
+        to this cohort.
+      </p>
+      <p>
+        What the Quinoline Veterans and Families Association and the Senate inquiry 
+        both emphasised is that correct diagnosis is the necessary first step — because 
+        treatment calibrated to the wrong condition will not help, and may in some 
+        cases make things worse.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        For more on the neurological mechanisms behind these symptoms, see <a href="https://www.jacqualineroche.com/the-brain">The Brain</a>. For what this injury looked like inside a home, see <a href="https://www.jacqualineroche.com/the-household">The Household</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 7 — FAMILIES
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="families">
+  <div class="section-inner">
+    <p class="section-eyebrow">Family and Social Impact</p>
+    <h2>The families: the unacknowledged consequences</h2>
+    <div class="prose">
+      <p class="lead-para">
+        The effects of quinoline-induced neurological injury did not stay with the 
+        veteran. They moved into households, into relationships, and into the childhoods 
+        of people who had nothing to do with the ADF. Partners and children have 
+        described living with consequences that were never correctly named, never 
+        correctly explained, and never appropriately supported.
+      </p>
+
+      <h3>What partners experienced</h3>
+      <p>
+        Partners and spouses of affected veterans describe living alongside someone 
+        who changed — sometimes gradually, sometimes suddenly — after returning from 
+        deployment. The changes they describe include explosive rage that could come 
+        without warning, paranoid suspicion that extended to family members, deep 
+        emotional withdrawal, and an inability to be present in the relationship even 
+        when physically in the room.
+      </p>
+      <p>
+        For years, these partners were told — by clinicians, by the veterans' affairs 
+        system, by the narrative that surrounded PTSD — that what they were seeing was 
+        the consequence of what their veteran had witnessed in a combat environment. 
+        The treatment being offered to their veteran was treatment for that. Partners 
+        were enrolled in support frameworks designed for families of people with PTSD, 
+        not frameworks designed for households where someone has an acquired brain injury 
+        affecting impulse control, paranoia, and emotional regulation.
+      </p>
+      <p>
+        The safety implications are real. Rage episodes and paranoid ideation in a 
+        household are not abstract clinical concerns. For some partners, the experience 
+        was one of living with a person whose most dangerous symptoms were being treated 
+        with an approach that did not reach them.
+      </p>
+
+      <h3>What children experienced</h3>
+      <p>
+        Children who grew up in households affected by quinoline injury were growing up 
+        in circumstances that no adult around them could accurately explain. The cycling 
+        between rage and remorse, the paranoid accusation, the emotional inaccessibility 
+        of a parent — these were the presentation of an unaddressed neurological injury. 
+        For many of these children, there was no clinical framework available to the 
+        adults in their lives that could name what was happening or design support 
+        around it.
+      </p>
+      <p>
+        The long-term effects on children raised in these households have not been 
+        systematically studied. Advocates have raised the question of intergenerational 
+        impacts, but this remains an area where there is essentially no research.
+      </p>
+
+      <h3>The support gap</h3>
+      <p>
+        The 2018 Senate inquiry included support for partners, carers, and families of 
+        affected veterans in its terms of reference. Written submissions described 
+        families who sought help and found that support was either unavailable or 
+        contingent on the veteran's condition being first recognised by DVA — which, 
+        for many years, it was not. The Royal Commission similarly heard from family 
+        members in private sessions.
+      </p>
+      <p>
+        The support system that exists for military families — principally Open Arms — 
+        provides counselling for family members of veterans, but it was designed around 
+        psychological conditions, not neurological ones. The specific needs of families 
+        living with quinoline-induced acquired brain injury are not met by that framework 
+        as currently designed.
+      </p>
+
+      <div class="callout">
+        <p class="callout-label">For partners and family members</p>
+        <p>
+          Open Arms provides counselling support for partners, family members, and carers 
+          of veterans and ADF members — not just for the veterans themselves. You do not 
+          need to be a veteran to call. The number is <a href="tel:1800011046">1800 011 046</a>, 
+          available 24 hours.
+        </p>
+      </div>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        For accounts specific to partners, see <a href="https://www.jacqualineroche.com/the-spouse">The Spouse</a>. For the experience of children raised in these households, see <a href="https://www.jacqualineroche.com/the-children">The Children</a>. For the household as a whole, see <a href="https://www.jacqualineroche.com/the-household">The Household</a>. These lived experiences eventually reached formal inquiries — with mixed results.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 8 — INQUIRIES AND INSTITUTIONAL RESPONSES
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="inquiries">
+  <div class="section-inner">
+    <p class="section-eyebrow">Inquiries and Institutional Responses</p>
+    <h2>What institutions have found — and what they have not</h2>
+
+    <div class="prose">
+      <p class="lead-para">
+        The history of official responses to the quinoline issue in Australia is, in 
+        part, a history of incomplete recognition followed by gradual movement. The key 
+        formal findings are documented below. The gap between what advocates have called 
+        for and what institutions have delivered remains significant.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Repatriation Medical Authority (2017)</h3>
+    <div class="prose">
+      <p>
+        In February 2017, the RMA opened a formal investigation into whether 
+        "chemically-acquired brain injury caused by mefloquine, tafenoquine, or 
+        primaquine" should become a recognisable condition under the veterans' 
+        entitlements framework. The investigation was prompted by advocacy from the 
+        QVFA and others.
+      </p>
+      <p>
+        In August 2017, the RMA concluded that there was insufficient sound 
+        medical-scientific evidence to make a Statement of Principles for this 
+        condition. This was a significant finding for veterans seeking compensation, 
+        because without an SOP, claims for this specific condition have no clear 
+        pathway through the DVA system.
+      </p>
+      <p>
+        The RMA did not find that the drugs were harmless. It continued to recognise 
+        mefloquine and tafenoquine as causal factors in a range of other conditions 
+        covered by existing SOPs — including anxiety disorder, depressive disorder, 
+        bipolar disorder, tinnitus, sensorineural hearing loss, peripheral neuropathy, 
+        epileptic seizure, and suicide. The core contradiction is that the drugs are 
+        accepted as causes of many separate conditions but not of an integrated 
+        brain-injury syndrome.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Specialist Medical Review Council (2018)</h3>
+    <div class="prose">
+      <p>
+        The QVFA and the Quinism Foundation (US) challenged the RMA's decision at the 
+        Specialist Medical Review Council, an independent review body. The SMRC 
+        confirmed the RMA's decision on 18 September 2018, finding that the evidence 
+        base did not support departing from the RMA's conclusion.
+      </p>
+    </div>
+
+    <div class="callout callout-caution" style="margin: 1.5rem 0;">
+      <p class="callout-label">Clarification: the alleged 2015 Defence acknowledgement</p>
+      <p>
+        Some advocacy sources refer to a 2015 Department of Defence statement acknowledging 
+        lasting neurological effects from mefloquine. No primary Defence document from 2015 
+        confirming such an acknowledgement has been located in the public record. The 
+        verifiable Defence position appears in its 2018 submission to the Senate Inquiry, 
+        which did not accept a distinct "chemically-acquired brain injury" diagnosis. This 
+        clarification is included to prevent the circulation of unverified claims.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Senate Inquiry (2018) — 14 Recommendations</h3>
+    <div class="prose">
+      <p>
+        The Foreign Affairs, Defence and Trade References Committee conducted a Senate 
+        inquiry into mefloquine and tafenoquine use in the ADF, tabling its report 
+        on 4 December 2018. The committee heard from veterans, families, advocates, 
+        researchers, the Department of Defence, and international experts.
+      </p>
+      <p>
+        The committee accepted that veterans' symptoms were genuine. Its "weight of 
+        evidence" conclusion was that long-term problems from mefloquine are rare and 
+        that the evidence for long-term effects from tafenoquine was not compelling — 
+        a conclusion contested by advocates and some researchers. It did not recommend 
+        an apology, a DVA Gold Card, or a royal commission (all of which the QVFA had 
+        called for).
+      </p>
+      <p>
+        The 14 recommendations fell into four broad areas: research-ethics reform, 
+        claims and support, clinical guidelines, and a neurocognitive health program. 
+        The Government agreed to 12 recommendations and agreed in principle to 2 others 
+        in its response of 15 March 2019.
+      </p>
+    </div>
+
+    <ul class="rec-list" style="margin-top: 1rem; max-width: 800px;">
+      <li>Update the Defence and DVA Human Research Ethics Committee terms of reference to address perceived coercion of ADF participants in research.</li>
+      <li>Appoint an independent participant advocate for ADF members invited to participate in medical research.</li>
+      <li>Contact all veterans who were part of mefloquine and tafenoquine trials and offer them DVA non-liability health care while a claim is assessed.</li>
+      <li>Assess and action the backlog of unresolved mefloquine and tafenoquine related claims, including applying new clinical guidelines once developed.</li>
+      <li>Establish a clear, simple claims pathway for veterans affected by quinoline drugs.</li>
+      <li>Review and where appropriate update Statements of Principles relevant to quinoline drugs.</li>
+      <li>Provide dedicated support through Open Arms for veterans affected by quinoline drugs and their families.</li>
+      <li>Investigate options for a "whole-of-person" case management approach for veterans with complex presentations.</li>
+      <li>Update the 2016 Mefloquine Clinical Guidelines in collaboration with the RACGP to incorporate current evidence.</li>
+      <li>Develop comprehensive practitioner guidance on managing veterans with possible quinoline-related adverse effects.</li>
+      <li>Establish a neurocognitive health pilot program for veterans who took part in quinoline trials.</li>
+      <li>Evaluate the pilot program and, if effective, extend it to all veterans affected by quinoline drugs.</li>
+      <li>Establish a working group to design the neurocognitive health program, including veteran representatives.</li>
+      <li>Commission longitudinal research into the long-term health effects of quinoline drugs in ADF veterans.</li>
+    </ul>
+
+    <div class="prose" style="margin-top: 1.5rem;">
+      <h3>The Bupa program: what happened next</h3>
+      <p>
+        The Government committed $2.1 million to a national GP health-assessment 
+        program for affected veterans, announced on 15 March 2019 and implemented 
+        from 1 July 2019. The contract was awarded to Bupa without a public tender 
+        process. By the time the program ran, only 109 assessments were provided — 
+        far below the number of veterans affected. The contract was subsequently 
+        referred to the National Anti-Corruption Commission. This outcome is widely 
+        regarded by advocates as emblematic of the gap between formal policy 
+        commitments and their actual delivery.
+      </p>
+
+      <h3>Royal Commission into Defence and Veteran Suicide (2024)</h3>
+      <p>
+        The Royal Commission into Defence and Veteran Suicide was the most significant 
+        official engagement with this issue to date. Its Final Report, delivered on 
+        9 September 2024, devoted Chapter 22 of Volume 4 to mefloquine and tafenoquine. 
+        Expert testimony from Dr Jane Quinn was included in the Commission's 
+        deliberations.
+      </p>
+      <p>
+        <strong>Recommendation 61</strong> called for the establishment of a brain-injury 
+        program covering, at a minimum: relevant Army corps, Special Forces, Navy 
+        clearance divers, Air Force combat controllers, and serving and ex-serving 
+        members who were exposed to mefloquine and/or tafenoquine. This was the 
+        first time an Australian body at the Royal Commission level had accepted 
+        the framework of brain injury — rather than psychiatric disorder — as the 
+        appropriate lens for this population.
+      </p>
+      <p>
+        The government's response to the Royal Commission's recommendations, including 
+        Recommendation 61, was still being developed at the time this page was last 
+        updated. The Quinoline Era remains an open chapter of Australian military history.
+      </p>
+
+      <h3>What the Quinoline Veterans and Families Association has called for</h3>
+      <p>
+        The QVFA, as the primary advocacy organisation for affected veterans and families, 
+        has consistently called for a broader set of responses than any official body 
+        has delivered. These include: a formal apology from the ADF; DVA Gold Cards 
+        for all veterans exposed to quinoline antimalarials during their service; a 
+        Royal Commission specifically into the use of ADF members in clinical trials; 
+        a single Statement of Principles for quinoline poisoning covering the full 
+        syndrome rather than its individual symptoms; CYP450 pharmacogenomic profiling 
+        for all ADF members; a ban on using ADF veterans as subjects in clinical trials; 
+        and a longitudinal research program including investigation of potential 
+        intergenerational effects on veterans' children.
+      </p>
+      <p>
+        These are advocacy positions, not official findings. They are documented here 
+        because they represent what the affected community has said it needs, and 
+        because the gap between these positions and what has been formally delivered 
+        is part of the record.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        Australia's experience sits within a wider international pattern — other militaries encountered the same drugs, the same problems, and in some cases moved to address them sooner.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 9 — INTERNATIONAL CONTEXT
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="international">
+  <div class="section-inner">
+    <p class="section-eyebrow">International Context</p>
+    <h2>How other countries responded</h2>
+    <div class="prose">
+      <p class="lead-para">
+        Australia was not alone in using mefloquine extensively in military populations 
+        — and not alone in the problems that followed. The experiences of the United 
+        States, the United Kingdom, and Canada offer important context, both because 
+        they show that this was a systemic issue across multiple military organisations 
+        and because the regulatory and policy responses in other countries often moved 
+        faster than Australia's.
+      </p>
+
+      <h3>United States</h3>
+      <p>
+        The US military was mefloquine's original developer and its most extensive user. 
+        The FDA added its boxed warning in July 2013, making explicit that neurological 
+        effects could be permanent. Following the warning, then-Assistant Secretary of 
+        Defense Jonathan Woodson directed that mefloquine be used only if four other 
+        antimalarial drugs had failed. US Army Special Operations Command effectively 
+        prohibited it. By 2015, US military prescriptions had fallen from a 2003 peak 
+        of roughly 50,000 to around 216 per year.
+      </p>
+      <p>
+        Mefloquine's use by US Special Forces in 2002 and subsequent events at Fort 
+        Bragg — which involved a cluster of domestic homicides and suicides among 
+        soldiers who had recently returned from Afghanistan — brought intense public 
+        scrutiny. Whether mefloquine was a factor in those events was contested by 
+        military authorities and was never officially established, but the episode 
+        accelerated advocacy for reform.
+      </p>
+
+      <h3>United Kingdom</h3>
+      <p>
+        A 2014 study by a Royal Navy medical officer found that 54% of naval personnel 
+        taking mefloquine on deployment reported at least one adverse event, with 13% 
+        experiencing events serious enough to require withdrawal from treatment. All 
+        female personnel in the study reported at least one adverse event.
+      </p>
+      <p>
+        The UK House of Commons Defence Committee reported in May 2016, recommending 
+        that mefloquine be a drug of last resort, given only after individual risk 
+        assessment and when no alternative is available. The Ministry of Defence 
+        revised its policy in September 2016.
+      </p>
+
+      <h3>Canada</h3>
+      <p>
+        Between 2001 and 2012, approximately 16,000 Canadian soldiers deployed to 
+        Afghanistan received mefloquine. Following advocacy by affected veterans and 
+        media coverage, the Canadian Armed Forces Surgeon General commissioned an 
+        independent task force, which reported in 2017. Canada subsequently adopted 
+        a more cautious prescribing framework.
+      </p>
+
+      <h3>European Medicines Agency</h3>
+      <p>
+        In 2014, the EMA's Pharmacovigilance Risk Assessment Committee found a signal 
+        of long-lasting and potentially persistent neuropsychiatric and vestibular 
+        effects from mefloquine, leading to updated labelling across Europe. This 
+        finding preceded the Australian Senate inquiry by four years.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        Understanding this history helps explain both the timeline of recognition and the support pathways that now exist for Australian veterans and their families.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 10 — TIMELINE
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="timeline">
+  <div class="section-inner">
+    <p class="section-eyebrow">Chronology</p>
+    <h2>A condensed timeline</h2>
+    <p style="color: var(--ink-muted); font-size: 0.88rem; margin-bottom: 1.8rem; max-width: 60ch;">
+      Key events in the development, use, and ongoing recognition of quinoline antimalarial 
+      harm in the ADF. The era continues.
+    </p>
+
+    <ul class="timeline">
+      <li>
+        <span class="tl-year">1970s–80s</span>
+        <span class="tl-body"><strong>Origins</strong>
+          Mefloquine (1970s) and tafenoquine (1980s) developed by the US Army's 
+          Walter Reed Army Institute of Research. US FDA approves mefloquine in 1989.</span>
+      </li>
+      <li>
+        <span class="tl-year">1990</span>
+        <span class="tl-body"><strong>ADF adoption</strong>
+          ADF adopts mefloquine as a second-line antimalarial, behind doxycycline, 
+          for deployment to malaria-endemic regions.</span>
+      </li>
+      <li>
+        <span class="tl-year">1993</span>
+        <span class="tl-body"><strong>US operational use</strong>
+          US military uses mefloquine in Somalia. Early adverse-event reports begin 
+          accumulating in military populations globally.</span>
+      </li>
+      <li>
+        <span class="tl-year">1998–99</span>
+        <span class="tl-body"><strong>Bougainville trials</strong>
+          Army Malaria Institute conducts first major tafenoquine trial with ADF 
+          personnel deployed to Bougainville; ~378 receive tafenoquine, 214 primaquine.</span>
+      </li>
+      <li>
+        <span class="tl-year">1999–2002</span>
+        <span class="tl-body"><strong>East Timor trials</strong>
+          Three trials conducted with ADF personnel on active operations in East Timor. 
+          Tafenoquine vs primaquine (1999–2000), tafenoquine vs mefloquine — the Nasveld 
+          trial (2000–01), and mefloquine vs doxycycline — the Kitchener trial (2001–02). 
+          Vortex keratopathy found in 93.2% of tafenoquine recipients in safety subgroup. 
+          No neuropsychiatric adverse events from these trials reported to the TGA.</span>
+      </li>
+      <li>
+        <span class="tl-year">2002</span>
+        <span class="tl-body"><strong>Fort Bragg (US)</strong>
+          Cluster of murders and suicides among recently returned US soldiers. Mefloquine 
+          use raises questions; causal link contested and not officially established.</span>
+      </li>
+      <li>
+        <span class="tl-year">2005</span>
+        <span class="tl-body"><strong>Kitchener trial published</strong>
+          Kitchener et al. (2005) published in the Medical Journal of Australia. Finds 
+          mefloquine "generally well tolerated"; 94% would take it again. The adverse-event 
+          data in the same paper is substantially more concerning than this headline.</span>
+      </li>
+      <li>
+        <span class="tl-year">2006</span>
+        <span class="tl-body"><strong>ADF policy change</strong>
+          ADF demotes mefloquine to third-line status; atovaquone/proguanil becomes 
+          the preferred second-line option.</span>
+      </li>
+      <li>
+        <span class="tl-year">2010</span>
+        <span class="tl-body"><strong>Nasveld trial published</strong>
+          Nasveld et al. (2010) published, reporting on the 2000–01 East Timor trial. 
+          Confirms vortex keratopathy in 93.2% of tafenoquine recipients in the safety 
+          substudy. This paper was published a decade after the trial.</span>
+      </li>
+      <li>
+        <span class="tl-year">2013</span>
+        <span class="tl-body"><strong>FDA boxed warning</strong>
+          US FDA adds the most serious category of safety alert to the mefloquine label: 
+          neurological effects may persist for months to years, or be permanent. 
+          US military designates mefloquine a drug of last resort. US SOCOM prohibits it.</span>
+      </li>
+      <li>
+        <span class="tl-year">2014</span>
+        <span class="tl-body"><strong>EMA finding</strong>
+          European Medicines Agency finds a signal of long-lasting and potentially 
+          persistent neuropsychiatric and vestibular effects from mefloquine; updated 
+          labelling across Europe.</span>
+      </li>
+      <li>
+        <span class="tl-year">2015</span>
+        <span class="tl-body"><strong>Ringqvist study; Quinn paper</strong>
+          Ringqvist et al. (2015) Danish follow-up study documents severe long-term 
+          psychiatric effects in mefloquine adverse-event reporters. Quinn (2015) 
+          publishes membrane-channel hypothesis. QVFA advocacy intensifies.</span>
+      </li>
+      <li>
+        <span class="tl-year">2016</span>
+        <span class="tl-body"><strong>UK policy</strong>
+          UK House of Commons Defence Committee recommends mefloquine as last resort 
+          after individual risk assessment. UK MoD revises policy in September 2016.</span>
+      </li>
+      <li>
+        <span class="tl-year">2017</span>
+        <span class="tl-body"><strong>RMA investigation and decision</strong>
+          RMA opens formal investigation into chemically-acquired brain injury from 
+          mefloquine, tafenoquine, and primaquine; concludes in August 2017 with 
+          insufficient evidence to make a Statement of Principles. Canadian Forces 
+          Surgeon General Task Force reports on mefloquine.</span>
+      </li>
+      <li>
+        <span class="tl-year">2018</span>
+        <span class="tl-body"><strong>Senate inquiry; SMRC decision; regulatory approvals</strong>
+          SMRC confirms RMA decision (September 2018). Senate inquiry tabled (4 December 2018) 
+          with 14 recommendations. Tafenoquine approved in the US and Australia for 
+          the first time. UQ self-reported health study commissioned by Defence and DVA 
+          reports. Quinism Foundation files with SMRC and FDA.</span>
+      </li>
+      <li>
+        <span class="tl-year">2019</span>
+        <span class="tl-body"><strong>Government response</strong>
+          Government agrees to 12 of 14 Senate recommendations and in principle to 2 more 
+          (15 March 2019). $2.1 million Bupa health-assessment program announced and 
+          implemented from 1 July 2019. Only 109 assessments eventually provided.</span>
+      </li>
+      <li>
+        <span class="tl-year">2021–24</span>
+        <span class="tl-body"><strong>Royal Commission</strong>
+          Royal Commission into Defence and Veteran Suicide hears testimony, including 
+          private sessions with families and expert evidence from Dr Jane Quinn. 
+          Final Report delivered 9 September 2024; Chapter 22 and Recommendation 61 
+          address the quinoline cohort.</span>
+      </li>
+      <li>
+        <span class="tl-year">Ongoing</span>
+        <span class="tl-body"><strong>Government response to Royal Commission; research gaps remain</strong>
+          The government's response to Recommendation 61 is still being developed. 
+          No longitudinal follow-up study of AMI trial participants has been conducted. 
+          The Quinoline Era is not closed.</span>
+      </li>
+    </ul>
+    <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+      For veterans and families navigating this history now, the next section sets out the support pathways currently available.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 11 — SUPPORT PATHWAYS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="support">
+  <div class="section-inner">
+    <p class="section-eyebrow">Getting Help</p>
+    <h2>Support pathways for veterans and families</h2>
+    <div class="prose">
+      <p class="lead-para">
+        If you are a veteran who took mefloquine or tafenoquine on deployment — or a 
+        family member of someone who did — there are support pathways available. Some 
+        are not yet adequate to the problem; that gap is part of what this page 
+        documents. But there are people and services who can help.
+      </p>
+    </div>
+
+    <div class="support-grid">
+
+      <div class="support-card">
+        <h4>Open Arms — Veterans &amp; Families Counselling</h4>
+        <a class="support-phone" href="tel:1800011046">1800 011 046</a>
+        <p>Available 24 hours, 7 days. Provides confidential counselling for veterans, 
+        ADF members, and their families. Partners and children can call without the 
+        veteran. Visit <a href="https://www.openarms.gov.au">openarms.gov.au</a></p>
+      </div>
+
+      <div class="support-card">
+        <h4>DVA Mefloquine &amp; Tafenoquine Information</h4>
+        <a class="support-phone" href="tel:1800633567">1800 633 567</a>
+        <p>DVA's dedicated line for veterans who have questions about mefloquine or 
+        tafenoquine exposure. Can provide information about non-liability health care 
+        and claims pathways. Visit <a href="https://www.dva.gov.au">dva.gov.au</a></p>
+      </div>
+
+      <div class="support-card">
+        <h4>DVA General — MyService</h4>
+        <a class="support-phone" href="tel:1800555254">1800 555 254</a>
+        <p>DVA's general information and claims line. The online portal MyService at 
+        <a href="https://www.dva.gov.au">dva.gov.au</a> allows veterans to lodge claims 
+        and track their status.</p>
+      </div>
+
+      <div class="support-card">
+        <h4>Lifeline</h4>
+        <a class="support-phone" href="tel:131114">13 11 14</a>
+        <p>24-hour crisis support and suicide prevention. Available to anyone in 
+        Australia experiencing a personal crisis. Call, text on 0477 13 11 14, or 
+        chat at <a href="https://www.lifeline.org.au">lifeline.org.au</a></p>
+      </div>
+
+      <div class="support-card">
+        <h4>Quinoline Veterans &amp; Families Association (QVFA)</h4>
+        <a class="support-phone" style="font-size: 1rem;" href="https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Foreign_Affairs_Defence_and_Trade/Mefloquine_Tafenoquine">QVFA</a>
+        <p>The primary veteran advocacy organisation for this issue. Contact via the 
+        Alliance of Defence Service Organisations (ADSO) network or through Senate 
+        submission channels.</p>
+      </div>
+
+      <div class="support-card">
+        <h4>The Quinism Foundation (International)</h4>
+        <a class="support-phone" style="font-size: 1rem;" href="https://quinism.org">quinism.org</a>
+        <p>US-based foundation focused on education and research on quinoline 
+        neurotoxicity. Provides disability evaluation support for veterans and 
+        coordinates international advocacy.</p>
+      </div>
+
+    </div>
+
+    <div class="prose" style="margin-top: 2rem;">
+      <h3>Making a DVA claim</h3>
+      <p>
+        Veterans seeking to make a DVA claim for conditions related to quinoline 
+        antimalarial exposure face a complex landscape. Because there is no single 
+        Statement of Principles for quinoline poisoning, claims must generally be 
+        made under the relevant SOPs for individual conditions — such as anxiety 
+        disorder, depressive disorder, tinnitus, or sleep disorder — and mefloquine 
+        or tafenoquine must be shown to be a causal factor in the relevant condition 
+        under that SOP.
+      </p>
+      <p>
+        The Senate inquiry recommended that a simpler claims pathway be established. 
+        As of the last update to this page, the Royal Commission's Recommendation 61 
+        (a brain-injury program) may represent the most significant step toward 
+        a more coherent pathway — but implementation depends on the government's 
+        response.
+      </p>
+      <p>
+        Engaging a veteran advocate through the QVFA, ADSO, or an ex-service 
+        organisation is advisable before lodging a complex claim. Open Arms can 
+        also assist with navigation.
+      </p>
+
+      <h3>Non-liability health care</h3>
+      <p>
+        Veterans who were part of the mefloquine or tafenoquine clinical trials may 
+        be entitled to DVA non-liability health care while a claim is being assessed. 
+        This was one of the Senate inquiry's recommendations. Contact DVA on 
+        <a href="tel:1800633567">1800 633 567</a> to discuss your eligibility.
+      </p>
+      <p style="color: var(--ink-muted); font-size: 0.93rem; margin-top: 1.4rem;">
+        The sources and further reading below set out the primary documents, peer-reviewed literature, and advocacy submissions on which this page is based.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOR JOURNALISTS AND RESEARCHERS
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section">
+  <div class="section-inner">
+    <div class="callout" style="max-width: 800px;">
+      <p class="callout-label">For journalists and researchers</p>
+      <p><strong>What is established:</strong> the ADF trials (1998–2002); the 2013 FDA boxed warning; the 2014 EMA finding; the 93.2% tafenoquine vortex-keratopathy rate in the Nasveld safety substudy; the RMA and SMRC decisions (2017–2018); the Senate inquiry's 14 recommendations and the Government's 2019 response; and the Royal Commission's Recommendation 61 (2024).</p>
+      <p><strong>What is contested:</strong> whether quinoline exposure causes a distinct, persistent neurological syndrome ("chronic quinoline encephalopathy" or "neuropsychiatric quinism") as a recognised clinical entity; and whether the misdiagnosis of affected veterans as PTSD patients has been systemic.</p>
+      <p><strong>What remains unknown:</strong> long-term health outcomes for AMI trial participants (no longitudinal follow-up study exists); the role of CYP2D6/CYP3A4 genetic variation in neurotoxicity risk; the mechanism by which symptoms persist after drug discontinuation; and the health impacts on partners and children of affected veterans.</p>
+      <p><strong>Primary sources:</strong> Senate Inquiry report and submissions (December 2018, Parliament of Australia); RMA investigation record (August 2017); SMRC decision (September 2018); Royal Commission Final Report, Volume 4, Chapter 22 (September 2024); FDA Drug Safety Communication (July 2013); EMA PRAC Assessment Report EMA/63963/2014.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 12 — EVIDENCE LIBRARY / SOURCES
+════════════════════════════════════════════════════════════════════════ -->
+<section class="page-section" id="sources">
+  <div class="section-inner">
+    <p class="section-eyebrow">Evidence Library</p>
+    <h2>Sources and further reading</h2>
+    <div class="prose">
+      <p>
+        This page draws on primary sources wherever possible. The label next to each 
+        source indicates its type:
+        <span class="src-label src-primary">Official/Primary</span> 
+        government, regulatory, or parliamentary documents;
+        <span class="src-label src-peer">Peer-reviewed</span> 
+        scientific and medical literature;
+        <span class="src-label src-advocacy">Advocacy</span> 
+        submissions and reports from veteran organisations;
+        <span class="src-label src-media">Media</span> 
+        investigative journalism and public reporting.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Regulatory and official documents</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        US Food and Drug Administration. <em>Drug Safety Communication: FDA approves label changes for antimalarial drug mefloquine hydrochloride due to risk of serious psychiatric and nerve side effects.</em> July 2013. 
+        <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-fda-approves-label-changes-antimalarial-drug-mefloquine-hydrochloride">fda.gov</a>
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        European Medicines Agency. PRAC Assessment Report on Mefloquine. EMA/63963/2014. 2014. (Vestibular/neuropsychiatric signal finding.)
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        Repatriation Medical Authority. <em>Investigation into Chemically Acquired Brain Injury Caused by Mefloquine, Tafenoquine or Primaquine.</em> August 2017.
+        <a href="https://www.aph.gov.au/DocumentStore.ashx?id=2e6309cc-ae7d-4c5c-a349-a0aba968d455&subId=657926">Parliament of Australia</a>
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        Australian Senate. Foreign Affairs, Defence and Trade References Committee. <em>Report: Investigation into the use of the quinoline antimalarial drugs mefloquine and tafenoquine in the Australian Defence Force.</em> December 2018.
+        <a href="https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Foreign_Affairs_Defence_and_Trade/Mefloquine_Tafenoquine">Parliament of Australia</a>
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        Department of Defence; Department of Veterans' Affairs. <em>Australian Government Response to the Senate Inquiry.</em> March 2019.
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        Royal Commission into Defence and Veteran Suicide. <em>Final Report, Volume 4: Health care for serving and ex-serving members, Chapter 22.</em> 9 September 2024.
+        <a href="https://defenceveteransuicide.royalcommission.gov.au/publications/final-report-volume-4">royalcommission.gov.au</a>
+      </li>
+      <li>
+        <span class="src-label src-primary">Official/Primary</span>
+        Department of Veterans' Affairs. <em>Mefloquine and Tafenoquine Information.</em> (Current page.)
+        <a href="https://www.dva.gov.au/what-we-help-with/health-support/injury-or-health-treatments/help-if-you-were-in-contact-with-substances-or-drugs/mefloquine-and-tafenoquine-information">dva.gov.au</a>
+      </li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Scientific and medical literature</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Nasveld PE, Edstein MD, Reid M, et al. Randomized, double-blind study of the safety, tolerability, and efficacy of tafenoquine versus mefloquine for malaria prophylaxis in nonimmune subjects. <em>Antimicrobial Agents and Chemotherapy.</em> 2010;54(2):792–798.
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2812156/">PMC</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Kitchener SJ, Nasveld PE, Gregory RM, Edstein MD. Mefloquine and doxycycline malaria prophylaxis in Australian soldiers in East Timor. <em>Medical Journal of Australia.</em> 2005;182(4):168–171.
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Ringqvist Å, Bech P, Glenthøj B, Petersen E. Acute and long-term psychiatric side effects of mefloquine: a follow-up on Danish adverse event reports. <em>Travel Medicine and Infectious Disease.</em> 2015;13(1):80–88.
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1477893914002129">ScienceDirect</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Nevin RL, Ritchie EC. The mefloquine intoxication syndrome: a significant potential confounder in the diagnosis and management of PTSD and other chronic deployment-related neuropsychiatric disorders. In: Ritchie EC, ed. <em>Posttraumatic Stress Disorder and Related Diseases in Combat Veterans.</em> Springer; 2015. DOI: 10.1007/978-3-319-22985-0_19.
+        <a href="https://link.springer.com/chapter/10.1007/978-3-319-22985-0_19">Springer</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Quinn JC. Complex membrane channel blockade: a unifying hypothesis for the prodromal and acute neuropsychiatric sequelae resulting from exposure to the antimalarial drug mefloquine. <em>Journal of Parasitology Research.</em> 2015;2015:368064.
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4630403/">PMC</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        McCarthy S. Malaria prevention, mefloquine neurotoxicity, neuropsychiatric illness, and risk-benefit analysis in the Australian Defence Force. <em>Journal of Parasitology Research.</em> 2015;2015:287651.
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4697095/">PMC</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Eick-Cost AA, Hu Z, Rohrbeck P, Clark LL. Neuropsychiatric outcomes after mefloquine exposure among U.S. Military service members. <em>American Journal of Tropical Medicine and Hygiene.</em> 2017;96(1):159–166.
+        <a href="https://www.ajtmh.org/view/journals/tpmd/96/1/article-p159.xml">AJTMH</a>
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Nevin RL, Leoutsakos J-M. Identification of a syndrome class of neuropsychiatric adverse reactions to mefloquine from latent class modeling of FDA adverse event reporting system data. <em>Drugs in R&amp;D.</em> 2017;17(1):199–210.
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Livezey J, Oliver T, Cantilena L. Prolonged neuropsychiatric symptoms in a military service member exposed to mefloquine. <em>Drug Safety Case Reports.</em> 2016;3(1):7.
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Ritchie EC, Block J, Nevin RL. Psychiatric side effects of mefloquine: applications to forensic psychiatry. <em>Journal of the American Academy of Psychiatry and the Law.</em> 2013;41(2):224–235.
+      </li>
+      <li>
+        <span class="src-label src-peer">Peer-reviewed</span>
+        Maxwell NM, Nevin RL, et al. Prolonged neuropsychiatric effects following management of chloroquine intoxication with psychotropic polypharmacy. <em>Clinical Case Reports.</em> 2015;3(6):379–387.
+      </li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Advocacy submissions and reports</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="src-label src-advocacy">Advocacy</span>
+        Quinn JC. Submission to the Senate Inquiry: Investigation into the use of quinoline antimalarial drugs mefloquine and tafenoquine in the Australian Defence Force. On behalf of QVFA. 2018.
+        <a href="https://www.aph.gov.au/DocumentStore.ashx?id=a9e949b7-b061-48ff-a3ff-d8ad833d28a5&subId=658994">Parliament of Australia</a>
+      </li>
+      <li>
+        <span class="src-label src-advocacy">Advocacy</span>
+        Quinoline Veterans and Families Association (QVFA). Primary submission to the Senate Inquiry. 2018.
+        <a href="https://www.aph.gov.au/DocumentStore.ashx?id=ac53afa9-dee2-4e77-aa20-5cc7bd840fd7&subId=612955">Parliament of Australia</a>
+      </li>
+      <li>
+        <span class="src-label src-advocacy">Advocacy</span>
+        The Quinism Foundation. Statement supporting Australian veterans' calls for chronic quinoline encephalopathy to be recognised as a compensable disorder. 2018.
+        <a href="https://quinism.org/press-releases/the-quinism-foundation-supports-australian-veterans-calls-for-chronic-quinoline-encephalopathy-to-be-recognized-as-a-compensable-disorder/">quinism.org</a>
+      </li>
+      <li>
+        <span class="src-label src-advocacy">Advocacy</span>
+        Waller M, Runge CE, Charlson FJ, Whiteford HA. <em>Self-reported Health of Australian Defence Force Personnel after Use of Anti-malarial Drugs on Deployment.</em> University of Queensland, School of Public Health. December 2018. (Commissioned by Departments of Defence and Veterans' Affairs.)
+      </li>
+      <li>
+        <span class="src-label src-advocacy">Advocacy</span>
+        Brain Injury Australia. <em>Brain Injury and Anti-Malarial Drug Use in the Military: Is There a Link?</em>
+        <a href="https://dev.braininjuryaustralia.org.au/brain-injury-anti-malarial-drugs-military/">braininjuryaustralia.org.au</a>
+      </li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Investigative journalism and public reporting</h3>
+    <ul class="sources-list">
+      <li>
+        <span class="src-label src-media">Media</span>
+        The Medical Republic. "Bupa's $7000 health checks for mefloquine veterans." 2019.
+        <a href="https://www.medicalrepublic.com.au/bupas-7000-health-checks-for-mefloquine-veterans/17636">medicalrepublic.com.au</a>
+      </li>
+      <li>
+        <span class="src-label src-media">Media</span>
+        The New Daily. "Veterans 'disheartened' by Senate inquiry into ADF anti-malarial drug trials." 5 December 2018.
+        <a href="https://thenewdaily.com.au/news/national/2018/12/05/veterans-senate-inquiry-anti-malarial-drug-trials/">thenewdaily.com.au</a>
+      </li>
+      <li>
+        <span class="src-label src-media">Media</span>
+        Canberra Times. "Soldiers scarred by antimalarial drugs to receive health check." 2019.
+        <a href="https://www.canberratimes.com.au/story/6278281/health-checks-for-soldiers-part-of-trial/">canberratimes.com.au</a>
+      </li>
+      <li>
+        <span class="src-label src-media">Media</span>
+        Michael West Media. "'But Now He's Dead': bittersweet reaction to Royal Commission into Veteran Suicide." 2024.
+        <a href="https://michaelwest.com.au/but-now-hes-dead-bittersweet-reaction-to-royal-commission-into-veteran-suicide/">michaelwest.com.au</a>
+      </li>
+    </ul>
+
+    <div class="callout callout-caution" style="margin-top: 2rem;">
+      <p class="callout-label">Research gaps</p>
+      <p>
+        There is no published longitudinal follow-up study of ADF personnel who participated 
+        in the AMI mefloquine and tafenoquine trials. No systematic pharmacogenomic analysis 
+        of this cohort has been conducted. No research has examined the health outcomes of 
+        partners and children of affected veterans. No validated diagnostic protocol for 
+        distinguishing quinoline-induced injury from PTSD in individuals with dual exposure 
+        (combat and quinoline) exists. These are the most significant gaps in the evidence 
+        base.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <p>
+    This page was last updated in 2025. It is not a government website. It does not 
+    provide legal or medical advice. All claims are referenced to primary sources 
+    where available. For crisis support: 
+    <a href="tel:1800011046">Open Arms 1800 011 046</a> &nbsp;·&nbsp; 
+    <a href="tel:131114">Lifeline 13 11 14</a>
+  </p>
+  <p style="margin-top: 0.6rem;">
+    <a href="#top">↑ Back to top</a>
+  </p>
+</footer>
+
+</body>
+</html>
